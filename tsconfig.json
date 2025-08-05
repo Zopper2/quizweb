@@ -13,15 +13,21 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": ".",                           // ✅ Required for alias
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "plugins": [
       {
         "name": "next"
       }
-    ],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/categories/[category]/page.jsx", "src/app/page.tsx", "src/app/signup/page.tsx", "src/app/login/page.jsx", "src/app/quiz/[id]/page.tsx", "src/app/components/quizcard/page.tsx", "src/app/admin/add-quiz/page.jsx", "src/app/api/auth/register/route.js", "src/app/api/quiz/category/details", "src/app/api/quiz/category/[category]/route.js", "src/app/user/page.jsx", "src/app/user/page.jsx", "src/app/quiz/page.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }
