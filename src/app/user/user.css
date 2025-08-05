@@ -1,0 +1,40 @@
+/* Animated background */
+body, .profile-background {
+  animation: gradientShift 10s ease infinite;
+  background: linear-gradient(-45deg, #d8b4fe, #f0abfc, #c084fc, #a78bfa);
+  background-size: 400% 400%;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Card transitions */
+.quiz-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.quiz-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Main layout enhancements */
+main {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h1, h2 {
+  color: #6b21a8;
+}
+
+.quiz-card-title {
+  color: #7e22ce;
+}
